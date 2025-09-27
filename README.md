@@ -1,34 +1,40 @@
 # SauceDemo Automation Tests
 
-This project contains Playwright automation tests for [saucedemo.com](https://www.saucedemo.com/).  
-The tests follow a Page Object Model (POM) structure.
+Playwright tests for https://www.saucedemo.com
 
 ## Setup
 npm install
-npx playwright install
+npm init playwright@latest
 
-Run Tests
+## Run Tests
+**Run all scenarios (sequential)**
+npm run test:all
+# headed:
+npm run test:all:headed
 
-Run all tests:
-npm test
-
-Run Q1 only:
+**Q1 only (locked_out_user error)**
 npm run test:q1
-
-Run Q1 with browser visible:
+# headed:
 npm run test:q1:headed
 
-Reports
-Playwright HTML Report
-npm run report
+**Q2 only (standard_user checkout flow)**
+npm run test:q2
+# headed:
+npm run test:q2:headed
 
-Allure Report
-Run tests
-npm run test:q1
+**Q3 only (performance_glitch_user)**
+npm run test:q3
+# headed:
+npm run test:q3:headed
 
-Generate and open report
+## Reports
+### Allure
+Run any test or suite, then:
 npm run allure:gen
 npm run allure:open
 
-Or in one step:
+**One-step examples**
 npm run test:q1:allure
+npm run test:q2:allure
+npm run test:q3:allure
+npm run test:all:allure
