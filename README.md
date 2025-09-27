@@ -54,9 +54,3 @@ npm run test:q2:allure
 npm run test:q3:allure
 npm run test:all:allure
 ```
-
-**One-step examples**
-npm run test:q1:allure
-npm run test:q2:allure
-npm run test:q3:allure
-npm run test:all:allure
