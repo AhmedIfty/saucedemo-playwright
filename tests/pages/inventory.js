@@ -12,10 +12,20 @@ export default class Inventory {
         await this.loc.menuClose.click();
     }
 
+    async sortByZA() {
+        await this.loc.sortSelect.selectOption('za');
+    }
+
+    async addFirstItemAfterSort() {
+        const firstName = (await this.loc.nameByIndex(1).textContent()).trim();
+        await this.loc.addButtonByIndex(1).click();
+        return firstName;
+    }
+
     async addFirstThree() {
-        await this.loc.addBackpack.click();
-        await this.loc.addBikeLight.click();
-        await this.loc.addBoltShirt.click();
+        await this.loc.addButtonByIndex(1).click();
+        await this.loc.addButtonByIndex(2).click();
+        await this.loc.addButtonByIndex(3).click();
     }
 
     async openCart() {

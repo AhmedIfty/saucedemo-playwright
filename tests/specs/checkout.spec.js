@@ -2,8 +2,8 @@ import { test, expect } from "@playwright/test";
 import Login from "../pages/login.js";
 import Inventory from "../pages/inventory.js";
 
-test.describe("Q2 - standard_user purchase flow", () => {
-    test("reset -> add 3 -> verify names & total -> finish -> reset -> logout", async ({ page }) => {
+test.describe("standard_user purchase flow", () => {
+    test("standard_user any 3 items purchase test", async ({ page }) => {
         // Login
         const login = new Login(page);
         await login.goto();
